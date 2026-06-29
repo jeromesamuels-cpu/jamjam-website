@@ -1,6 +1,6 @@
 # Jam Jam — Hot Jamaican Patties (host-acquisition website)
 
-A static, brand-accurate marketing + lead-capture site for **jamjamvending.ca**.
+A static, brand-accurate marketing + lead-capture site for **jamjamvending.com**.
 Its job right now: take cold-outreach prospects, explain the no-staff hot-food amenity, and
 capture **"Request a machine"** leads for the September install cohort.
 
@@ -21,8 +21,8 @@ website/
 ## 1. Connect the lead form (REQUIRED before outreach)
 The "Request a machine" form is wired for **Formspree** (free tier, no backend, emails you each lead + keeps a dashboard list).
 
-1. Go to https://formspree.io and sign up with **info@jamjamvending.ca**.
-2. Create a new form. Set the notification email to **info@jamjamvending.ca**.
+1. Go to https://formspree.io and sign up with **info@jamjamvending.com**.
+2. Create a new form. Set the notification email to **info@jamjamvending.com**.
 3. Copy the form's endpoint — it looks like `https://formspree.io/f/abcdwxyz`.
 4. In `index.html`, find:
    ```html
@@ -36,8 +36,8 @@ Until this is done, the form shows a friendly "email us instead" message instead
 *(Alternative: Tally.so or a Google Form embed both work the same way — swap the `<form>` for their embed.)*
 
 ## 2. Point the domain
-The site is deployed on GitHub Pages. To serve it at **jamjamvending.ca**:
-1. Repo → **Settings → Pages → Custom domain** → enter `jamjamvending.ca` → Save.
+The site is deployed on GitHub Pages. To serve it at **jamjamvending.com**:
+1. Repo → **Settings → Pages → Custom domain** → enter `jamjamvending.com` → Save.
 2. At your domain registrar, add DNS records:
    - **A records** for the apex `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - **CNAME** for `www` → `jeromesamuels-cpu.github.io`

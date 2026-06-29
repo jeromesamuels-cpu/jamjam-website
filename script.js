@@ -39,7 +39,7 @@
 
       // Guard: not yet wired to a real Formspree form
       if (action.indexOf('YOUR_FORM_ID') !== -1) {
-        setStatus('Form not connected yet — see README to add your Formspree ID. Meanwhile, email info@jamjamvending.ca.', 'err');
+        setStatus('Form not connected yet — see README to add your Formspree ID. Meanwhile, email info@jamjamvending.com.', 'err');
         return;
       }
 
@@ -60,13 +60,13 @@
           } else {
             return res.json().then(function (data) {
               var msg = (data && data.errors && data.errors.map(function (x) { return x.message; }).join(', ')) ||
-                'Something went wrong. Please email info@jamjamvending.ca.';
+                'Something went wrong. Please email info@jamjamvending.com.';
               setStatus(msg, 'err');
             });
           }
         })
         .catch(function () {
-          setStatus('Network error. Please email info@jamjamvending.ca or call 416-710-4850.', 'err');
+          setStatus('Network error. Please email info@jamjamvending.com or call 416-710-4850.', 'err');
         })
         .finally(function () {
           if (btn) { btn.disabled = false; btn.textContent = original; }
